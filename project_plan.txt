@@ -1,0 +1,52 @@
+Plan de testare pentru website-ul Ursus Breweries 
+https://ursus-breweries.ro
+==============
+
+Scopul testării:
+-----------------
+Validarea funcționalității website-ului
+Asigurarea securității website-ului
+Evaluarea performanței website-ului
+Testarea ușurinței de utilizare (usability)
+
+Modalitatea de testare:
+-----------------------
+Black box: Testarea va fi realizată fără a se cunoaște detaliile implementării interne a website-ului.
+
+Automată: Testarea va fi automatizată folosind instrumente specifice, cum ar fi Selenium sau Postman??.
+
+Manuală: Testarea manuală va fi utilizată pentru a completa testarea automată și a verifica aspecte specifice care nu pot fi automatizate.
+
+Instrumente de testare:
+-----------------------
+Requests: Un modul Python pentru a trimite solicitări HTTP.
+Selenium: Un instrument pentru automatizarea testării interfețelor web.
+???Postman: Un instrument pentru testarea API-urilor.
+
+Mediu de testare:
+-----------------
+Web: Testarea va fi realizată pe browser Chrome.
+Desktop: Testarea va fi realizată pe sisteme de operare desktop macOS.
+
+Rolul testerului:
+------------------
+Utilizator: Testarea va fi realizată din perspectiva unui utilizator obișnuit al website-ului.
+
+Tester / Dezvoltator: Testarea va fi realizată de către testeri/dezvoltatori pentru a identifica și remedia problemele legate de cod.
+
+Test case-uri:
+---------------
+1. Testarea protocolului HTTP:
+Tip test: Black box, automata
+Descriere: Testarea va verifica starea de raspuns a paginii web.
+
+2. Testarea funcționalității de logare:
+Tip test: Black box, automată
+Descriere: Testarea va verifica dacă funcționalitatea de logare a website-ului funcționează corect.
+
+3. Testarea funcționalității de creare a unui cont nou:
+Tip test: Black box, manuală
+Descriere: Testarea va verifica dacă funcționalitatea de creare a unui cont nou funcționează corect.
+
+
+

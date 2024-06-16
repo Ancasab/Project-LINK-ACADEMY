@@ -1,0 +1,21 @@
+Project Brief
+==============
+Pentru proiect, trebuie ales un domeniu la propria alegere și apoi efectuată testarea sa.
+
+Pentru testare, este necesar un plan de testare: 
+● scopul testării, adică ce își propune testarea să realizeze (ex: funcționalitate, securitate, performanță, ușurința de utilizare/usability) 
+● modalitatea de testare pentru fiecare test (ex: black box vs. white box/automată vs. manuală) 
+● ce instrumente sunt folosite pentru testare (ex: Selenium, Postman, sau module Python precum requests) 
+● care este mediul de testare (ex: web/mobile/desktop Windows/Macbook) 
+● cine testează (ex: utilizator/administrator/dezvoltator) 
+● ce va fi testat, adică ce flux se încearcă a fi testat și rezultatul așteptat (ex: logare/creare cont nou, funcționalitate, API-uri)
+
+Se dorește crearea a cel puțin 5 test case-uri (cazuri de testare), dintre care: 
+1. cel puțin o testare a protocolului HTTP 
+2. cel puțin două teste automate 
+3. cel puțin o testare a interfeței cu utilizatorul
+
+
+
+
+
