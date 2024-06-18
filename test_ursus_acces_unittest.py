@@ -83,11 +83,12 @@ class TestAcces(unittest.TestCase):
 
         mesaj = "Vă rugăm să introduceți anul dvs de naștere"
         print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
-
+        time.sleep(10)
 
         zi = str(datetime.datetime.today().day)
         zi = zi.zfill(2)
-
+        time.sleep(10)
+        
         self.insereaza_zi(zi)
         assert self.driver.current_url == "https://ursus-breweries.ro/marci/"
 

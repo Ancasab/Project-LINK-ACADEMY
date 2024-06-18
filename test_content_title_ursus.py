@@ -28,20 +28,3 @@ driver.close()
 
 
 
-
-
-
-
-
-# def check_page_title():
-
-#     ## Search for the title within the response text
-#     title = driver.find_element(By.XPATH, '/html/body/div[2]/div/section[1]/div/div[3]/h1').text
-#     # print(title)
-
-#     if title == "Ursus Brewery":
-#         print('Success: The page title contains the expected text')
-#     else:
-#         print('Error: The page title does not contain the expected text:', title)
-
-
