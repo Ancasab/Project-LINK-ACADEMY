@@ -11,7 +11,7 @@ def get_links():
     locations = soup.find_all("loc")
 
     xml_locations = [l.text for l in locations]
-    print("The number of location is: ", len(xml_locations), xml_locations)
+    print(f"The number of location is: {len(xml_locations)} \n {xml_locations}")
 
     all_xml_links =[]
 
