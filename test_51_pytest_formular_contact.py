@@ -14,22 +14,34 @@ import time
 
 
 
+# # Accesare browser CHROME
+# @pytest.fixture
+# def browser():
+#     chrome_options = Options()
+#     chrome_options.add_argument("--disable-search-engine-choice-screen")
+#     driver = webdriver.Chrome(options = chrome_options)
+#     driver.maximize_window()
+#     return driver
+#     driver.quit()
+
+
 # Accesare browser CHROME
 @pytest.fixture
 def browser():
     chrome_options = Options()
     chrome_options.add_argument("--disable-search-engine-choice-screen")
-    driver = webdriver.Chrome(options = chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     driver.maximize_window()
-    return driver
-    driver.quit()
+    yield driver  # Yield the driver object for use in tests
+    driver.quit()  # Close the browser after the test
 
 
-# 14. Test accesare sectiunea 'CONTACT '  
-def test_accesare_contact(browser:webdriver.Chrome):
+#  Test accesare sectiunea 'CONTACT '
+def test_accesare_contact(browser: webdriver.Chrome):
     # accesare site
-    browser().get("https://https://ursus-breweries.ro")
+    browser.get("https://ursus-breweries.ro")  # Use browser object directly
     time.sleep(2)
+
 
     # acceptare cookie-uri pagina principala
     cookie = browser.find_element(By.ID, "CybotCookiebotDialogBodyLevelButtonAcceptWrapper")
