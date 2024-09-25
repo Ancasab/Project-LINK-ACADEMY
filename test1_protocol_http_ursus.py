@@ -16,12 +16,12 @@ def test_response():
 
 
 
-if check_response_status(url) == 200:
-    print("Pagina web este disponibila (200 OK) pentru:", url)
-elif check_response_status(url)== 404:
-    print("Pagina web nu a fost gasita (404 Not Found) pentru:", url)
-else:
-    print("Stare de raspuns neasteptata:", response.status_code, "pentru:", url)
+# if check_response_status(url) == 200:
+#     print("Pagina web este disponibila (200 OK) pentru:", url)
+# elif check_response_status(url)== 404:
+#     print("Pagina web nu a fost gasita (404 Not Found) pentru:", url)
+# else:
+#     print("Stare de raspuns neasteptata:", response.status_code, "pentru:", url)
 
 
 

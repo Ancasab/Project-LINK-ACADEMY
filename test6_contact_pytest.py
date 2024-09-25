@@ -33,6 +33,7 @@ def setup_teardown():
     time.sleep(3)
     driver.find_element(By.LINK_TEXT, "Contact").click()
     time.sleep(10)
+
     yield driver
     # Teardown after test
     driver.quit()
@@ -49,22 +50,22 @@ def test_formular_contact_complete(setup_teardown):
     time.sleep(3)
 
     input_first_name = driver.find_element(By.NAME, "field-first_name")
-    input_first_name.send_keys("Popescu")
+    input_first_name.send_keys("Ionescu")
     input_first_name.send_keys(Keys.TAB)
     time.sleep(3)
 
     input_second_name = driver.find_element(By.NAME, "field-last_name")
-    input_second_name.send_keys("Marin")
+    input_second_name.send_keys("Ion")
     input_second_name.send_keys(Keys.TAB)
     time.sleep(3)
 
     input_email = driver.find_element(By.NAME, "field-email")
-    input_email.send_keys("Marin_Popescu@yaho.com")
+    input_email.send_keys("ion_ionescu@yaho.com")
     input_email.send_keys(Keys.TAB)
     time.sleep(3)
 
     input_message = driver.find_element(By.NAME, "field-message")
-    input_message.send_keys("Mesaj test")
+    input_message.send_keys("testare contact")
     time.sleep(3)
 
     btn_trimite = driver.find_element(By.CLASS_NAME, "btn--submit-ro")
@@ -74,6 +75,7 @@ def test_formular_contact_complete(setup_teardown):
     mesaj_confirmare = driver.find_element(By.CLASS_NAME, "wpcf7-response-output")
     time.sleep(10)
     assert mesaj_confirmare.text == 'Mesajul tău a fost trimis.'
+
 
 def test_formular_contact_empty(setup_teardown):
     driver = setup_teardown
@@ -154,7 +156,6 @@ def test_formular_email(setup_teardown):
     mesaj_confirmare = driver.find_element(By.CLASS_NAME, "wpcf7-response-output")
     time.sleep(10)
     assert mesaj_confirmare.text == 'Unul sau mai multe câmpuri au o eroare. Te rog să verifici și să încerci din nou.'
-
 
  
 
