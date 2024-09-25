@@ -30,8 +30,8 @@ Testarea ușurinței de utilizare (usability)
 
 ## Mediu de testare:
 
-Web: Testarea va fi realizată pe browser Chrome.
-Desktop: Testarea va fi realizată pe sisteme de operare desktop macOS.
+- Web: Testarea va fi realizată pe browser Chrome.
+- Desktop: Testarea va fi realizată pe sisteme de operare desktop macOS.
 
 ## Rolul testerului:
 
