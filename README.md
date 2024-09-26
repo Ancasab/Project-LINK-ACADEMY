@@ -1,13 +1,13 @@
-## LINK Academy Software Testing and QA - Lucrarea finală
+# LINK Academy Software Testing and QA - Lucrarea finală
 
-## Scopul testării:
+# Scopul testării:
 
 - Validarea funcționalității website-ului
 - Testarea ușurinței de utilizare (usability)
 
 website-ul Ursus Breweries https://ursus-breweries.ro
 
-## Modalitatea de testare:
+# Modalitatea de testare:
 
 ## Metode de testare
 
@@ -42,7 +42,7 @@ Tester / Dezvoltator: Testarea va fi realizată de către testeri/dezvoltatori p
 
 ## Test case-uri:
 
-## 1. Testarea protocolului HTTP:
+### 1. Testarea protocolului HTTP:
 
 Fisier: "test1_protocol_http_ursus.py"
 Tip test: Black box, automat
@@ -50,7 +50,7 @@ Instrumente:request, selenium, pytest
 Descriere: Testarea va verifica starea de raspuns a paginii principale (coduri de stare HTTP, cum ar fi 200, 404, 500).
 Criteriu de succes: cererea HTTP returnează codul de răspuns 200
 
-## 2. Testarea accesarii paginii principale:
+### 2. Testarea accesarii paginii principale:
 
 Fisier: "test2_content_title_ursus.py"
 Tip test: Black box, automat
@@ -58,7 +58,7 @@ Instrumente:request, selenium, pytest
 Descriere: Testarea va verifica dacă pagina principală se încarcă corect și returnează titlul așteptat.
 Criteriu de succes: cererea HTTP returnează titlul corect al paginii pricipale
 
-## 3. Testarea validării formularului de vârstă:
+### 3. Testarea validării formularului de vârstă:
 
 Fisier: "test3_ursus_acces_unittest.py"
 Tip test: Black box, automat
@@ -66,7 +66,7 @@ Instrumente:request, selenium, unittest, WebDriverWait, expected_conditions as E
 Descriere: Testarea verifica dacă formularul validează corect vârsta utilizatorilor și permite accesul doar celor care au peste 18 ani.
 Criteriu de succes: numai utilizatorii cu o vârstă validă au acces.
 
-## 4. Testarea asincrona a tuturor link-urilor:
+### 4. Testarea asincrona a tuturor link-urilor:
 
 Fisiere: "sitemap.py", "links.txt", "test4_async_links.py"
 Tip test: Black box, automat
@@ -74,7 +74,7 @@ Instrumente: requests, selenium, pytest, BeautifulSoup (bs4), asyncio, aiohttp
 Descriere: Testarea identifică și testează toate link-urile de pe site pentru a verifica dacă răspund corect (pasul 1: identificare link-uri; pasul 2: verificare răspunsuri HTTP).
 Criteriu de succes: toate cererile HTTP returnează codul de răspuns 200.
 
-## 5. Testarea accesarii paginilor de social media:
+### 5. Testarea accesarii paginilor de social media:
 
 Fisier: "test5_socialmedia_pytest.py"
 Tip test: Black box, automat
@@ -82,7 +82,7 @@ Instrumente: selenium, pytest
 Descriere: Testarea verifica dacă link-urile către paginile de social media (Facebook și LinkedIn) funcționează corect.
 Criteriu de succes: este accesata corect pagina de login a rețelei sociale.
 
-## 6. Testarea formularului de "Contact":
+### 6. Testarea formularului de "Contact":
 
 Fisier: "test6_contact_pytest.py"
 Tip test: Black box, automat
