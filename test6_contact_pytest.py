@@ -10,24 +10,22 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope="function")
 def setup_teardown():
-    # Setup WebDriver
-    # driver = webdriver.Chrome()
 
     chrome_options = Options()
     chrome_options.add_argument("--disable-search-engine-choice-screen")
     driver = webdriver.Chrome(options=chrome_options)
     driver.get("https://ursus-breweries.ro")
 
-    # Accept cookie consent dialog (adjust timeout as needed)
+    # Accept cookie 
     time.sleep(10)
     COOKIE_ID = "CybotCookiebotDialogBodyLevelButtonAcceptWrapper"
     driver.find_element(By.ID, COOKIE_ID).click()
 
-    # Improved approach using WebDriverWait
-    wait = WebDriverWait(driver, 10)
-    wait.until(EC.invisibility_of_element_located((By.ID, "CybotCookiebotDialog")))
+    # # Improved approach using WebDriverWait
+    # wait = WebDriverWait(driver, 10)
+    # wait.until(EC.invisibility_of_element_located((By.ID, "CybotCookiebotDialog")))
 
-    # def access_marci(self):
+    # def access_marci:
     driver.find_element(By.CSS_SELECTOR, ".button-menu.button-menu--js.aos-init.aos-animate").click()
     
     time.sleep(3)

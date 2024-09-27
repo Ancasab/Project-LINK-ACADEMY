@@ -27,11 +27,14 @@ def test_deschidere_linkedin(setup_teardown):
     driver.switch_to.window(all_tabs[1])
     time.sleep(3)
 
-    linkedin_message = driver.find_element(By.CSS_SELECTOR, "button.artdeco-global-alert-action")
-    # time.sleep(3)
-    linkedin_message.text
-    assert linkedin_message.text == "Accept"
-    # time.sleep(3)
+    # linkedin_message = driver.find_element(By.CSS_SELECTOR, "button.artdeco-global-alert-action")
+    # # time.sleep(3)
+    # linkedin_message.text
+    # assert linkedin_message.text == "Accept"
+    # # time.sleep(3)
+
+    # assert driver.current_url == "https://www.linkedin.com/company/ursus-breweries/"
+    assert driver.current_url == "https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F2979195%2F"
 
 
 

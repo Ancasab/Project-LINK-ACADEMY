@@ -53,7 +53,7 @@ Criteriu de succes: cererea HTTP returnează titlul corect al paginii pricipale
 
 Fisier: "test3_ursus_acces_unittest.py"
 Tip test: Black box, automat
-Instrumente:request, selenium, unittest, WebDriverWait, expected_conditions as EC
+Instrumente:request, selenium, unittest
 Descriere: Testarea verifica dacă formularul validează corect vârsta utilizatorilor și permite accesul doar celor care au peste 18 ani.
 Criteriu de succes: numai utilizatorii cu o vârstă validă au acces.
 
