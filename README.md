@@ -3,7 +3,6 @@
 # Scopul testării:
 
 - Validarea funcționalității website-ului
-- Testarea ușurinței de utilizare (usability)
 
 website-ul Ursus Breweries https://ursus-breweries.ro
 
@@ -12,33 +11,25 @@ website-ul Ursus Breweries https://ursus-breweries.ro
 ## Metode de testare
 
 - Testare funcțională: verificăm funcționalitatea fiecărei părți importante ale site-ului, cum ar fi navigarea, formularele și link-urile.
-- Testare de ușurință de utilizare (Usability): ne asigurăm că website-ul este ușor de utilizat pentru utilizatori de toate nivelurile.
 
 ## Tipuri de testare:
 
 - Black box: Testarea va fi realizată fără a se cunoaște detaliile implementării interne a website-ului.
 - Automată: Testarea va fi automatizată folosind instrumente specifice cum ar fi Selenium
-- Manuală: Testarea manuală va fi utilizată pentru a completa testarea automată și a verifica aspecte specifice care nu pot fi automatizate.
 
 ## Instrumente de testare:
 
 - Requests: Modul Python pentru a trimite cereri HTTP și a verifica starea paginilor.
 - Selenium: Instrument folosit pentru automatizarea acțiunilor în browser, precum navigarea sau completarea formularelor.
+- Jupyter Notebook: mediu interactiv de programare folosit pentru a scrie și executa bucăți de cod Python (și alte limbaje) direct în celule, vizualizând rezultatele imediat.
 - Unittest și Pytest: Framework-uri de testare pentru rularea testelor automatizate.
 - BeautifulSoup (bs4): Bibliotecă pentru extragerea datelor din pagini HTML, utilizată la parsearea codului HTML.
 - Asyncio și Aiohttp: Biblioteci ce permit rularea testelor asincrone pentru performanță și eficiență în testarea link-urilor.
-- Jupyter Notebook: mediu interactiv de programare folosit pentru a scrie și executa bucăți de cod Python (și alte limbaje) direct în celule, vizualizând rezultatele imediat.
 
 ## Mediu de testare:
 
 - Web: Testarea va fi realizată pe browser Chrome.
 - Desktop: Testarea va fi realizată pe sisteme de operare desktop macOS.
-
-## Rolul testerului:
-
-Utilizator: Testarea va fi realizată din perspectiva unui utilizator obișnuit al website-ului.
-
-Tester / Dezvoltator: Testarea va fi realizată de către testeri/dezvoltatori pentru a identifica și remedia problemele legate de cod.
 
 ## Test case-uri:
 

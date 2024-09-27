@@ -1,8 +1,6 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import time
 import datetime
@@ -21,16 +19,13 @@ class TestAcces(unittest.TestCase):
         self.driver.get('https://ursus-breweries.ro')
 
 
-        # Accept cookie consent dialog (adjust timeout as needed)
+        # Accept cookie 
         time.sleep(10)
         COOKIE_ID = "CybotCookiebotDialogBodyLevelButtonAcceptWrapper"
         self.driver.find_element(By.ID, COOKIE_ID).click()
 
-         # Improved approach using WebDriverWait
-        wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.invisibility_of_element_located((By.ID, "CybotCookiebotDialog")))
 
-        # def access_marci(self):
+        # def acces_marci(self):
         self.driver.find_element(By.CSS_SELECTOR, ".button-menu.button-menu--js.aos-init.aos-animate").click()
        
         time.sleep(3)
@@ -44,19 +39,23 @@ class TestAcces(unittest.TestCase):
         input_year = self.driver.find_element(By.CLASS_NAME, "year")
         input_year.send_keys(an_nastere)
 
+
     def insereaza_luna(self, luna):
         input_month =  self.driver.find_element(By.NAME, "month")
         input_month.send_keys(luna)
+
 
 
     def insereaza_zi(self, zi):
         input_day = self.driver.find_element(By.NAME, "day")
         input_day.send_keys(zi)
 
+
     def test_access(self):
         an = "1999"
         self.insereaza_an(an)
         assert self.driver.current_url == "https://ursus-breweries.ro/marci/"
+        time.sleep(10)
 
     def test_fara_access(self):
         an = "2007"
@@ -73,7 +72,7 @@ class TestAcces(unittest.TestCase):
         
         time.sleep(10)
         mesaj = "Vă rugăm să introduceți anul dvs de naștere"
-        print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
+        # print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
 
         assert self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text == mesaj
     
@@ -86,25 +85,28 @@ class TestAcces(unittest.TestCase):
         
         time.sleep(10)
         mesaj = "Vă rugăm să introduceți anul dvs de naștere"
-        print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
+        # print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
 
         assert self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text == mesaj
 
         luna = str(datetime.datetime.today().month)
         luna = luna.zfill(2)
+        print("luna curenta:", luna)
         self.insereaza_luna(luna)
+        time.sleep(10)
+    
 
         mesaj = "Vă rugăm să introduceți anul dvs de naștere"
-        print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
-
+        # print("text:", self.driver.find_element(By.XPATH, "/html/body/div[1]/div[1]/div[1]/form/h3[2]").text)
 
         zi = str(datetime.datetime.today().day)
         zi = zi.zfill(2)
-
+        print("ziua curenta:", zi)
         self.insereaza_zi(zi)
+        time.sleep(10)
         assert self.driver.current_url == "https://ursus-breweries.ro/marci/"
 
-        time.sleep(20)
+        time.sleep(10)
 
 
 if __name__ == "__main__":

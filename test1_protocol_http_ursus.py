@@ -2,7 +2,7 @@ import requests
 import pytest
 
 
-# Functie pentru a verifica starea de raspuns a paginii web
+# verifica starea de raspuns a paginii web
 def check_response_status(url):
     response = requests.get(url)
     return response.status_code
