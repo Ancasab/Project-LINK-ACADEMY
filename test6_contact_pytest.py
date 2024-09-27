@@ -3,9 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
-import datetime
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 
 @pytest.fixture(scope="function")
@@ -21,9 +18,6 @@ def setup_teardown():
     COOKIE_ID = "CybotCookiebotDialogBodyLevelButtonAcceptWrapper"
     driver.find_element(By.ID, COOKIE_ID).click()
 
-    # # Improved approach using WebDriverWait
-    # wait = WebDriverWait(driver, 10)
-    # wait.until(EC.invisibility_of_element_located((By.ID, "CybotCookiebotDialog")))
 
     # def access_marci:
     driver.find_element(By.CSS_SELECTOR, ".button-menu.button-menu--js.aos-init.aos-animate").click()
@@ -48,17 +42,17 @@ def test_formular_contact_complete(setup_teardown):
     time.sleep(3)
 
     input_first_name = driver.find_element(By.NAME, "field-first_name")
-    input_first_name.send_keys("Ionescu")
+    input_first_name.send_keys("Marinescu")
     input_first_name.send_keys(Keys.TAB)
     time.sleep(3)
 
     input_second_name = driver.find_element(By.NAME, "field-last_name")
-    input_second_name.send_keys("Ion")
+    input_second_name.send_keys("Marin")
     input_second_name.send_keys(Keys.TAB)
     time.sleep(3)
 
     input_email = driver.find_element(By.NAME, "field-email")
-    input_email.send_keys("ion_ionescu@yaho.com")
+    input_email.send_keys("marin_marinescu@yaho.com")
     input_email.send_keys(Keys.TAB)
     time.sleep(3)
 
@@ -77,12 +71,12 @@ def test_formular_contact_complete(setup_teardown):
 
 def test_formular_contact_empty(setup_teardown):
     driver = setup_teardown
-    time.sleep(3)
-    driver.find_element(By.XPATH, "/html/body/div[1]/section[1]/div[2]/div[2]/span").click()
-    time.sleep(3)
-    driver.execute_script("window.scrollTo(0,600 + window.scrollY);")
-    driver.find_element(By.CSS_SELECTOR, "#wpcf7-f2652-o1 > form > h3")
-    time.sleep(3)
+    # time.sleep(3)
+    # driver.find_element(By.XPATH, "/html/body/div[1]/section[1]/div[2]/div[2]/span").click()
+    # time.sleep(3)
+    driver.execute_script("window.scrollTo(0,900 + window.scrollY);")
+    # driver.find_element(By.CSS_SELECTOR, "#wpcf7-f2652-o1 > form > h3")
+    # time.sleep(3)
 
     input_first_name = driver.find_element(By.NAME, "field-first_name")
     input_first_name.send_keys("")
